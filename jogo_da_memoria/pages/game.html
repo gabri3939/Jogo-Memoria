@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/game.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="player"></span>
+        <span>Tempo: <span class="timer">0</span>s</span>
+        <span>Pontuação: <span class="Score">0</span></span>
+      </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/game.css">
+      <div class="grid"></div>
+    </main>
 
-  <script defer src="../js/game.js"></script>
+    <div id="question-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <h2 id="question-text" class="question-title"></h2>
+        <div id="answers-container" class="answers-container"></div>
+        <p id="question-feedback" class="feedback hidden"></p>
+        <button id="submit-answer">Continuar</button>
+      </div>
+    </div>
 
-  <title>Memory Game</title>
-</head>
-
-<body>
-
-  <main>
-    <header>
-      <span class="player"></span>
-      <span>Tempo: <span class="timer">00</span></span>
-    </header>
-
-    <div class="grid"></div>
-  </main>
-
-</body>
-
+    <script src="../js/game.js"></script>
+  </body>
 </html>
